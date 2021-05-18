@@ -1,0 +1,25 @@
+.nav{
+    background-color: rgb(221, 192, 26);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.nav ul{
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav li{
+    padding-right: 20px;
+    list-style-type: none;
+}
+
+form{
+    display: inline-block;
+    width: 100px;
+}
