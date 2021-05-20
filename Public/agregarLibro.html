@@ -16,7 +16,7 @@
             </ul>        
         </div>
         <!-- cambiar validaciones a onImput y de ahí mandar llamar funcion de validar banderas  -->
-        <form name="myForm" onsubmit="submitHandle(this); return false;">
+        <form name="myForm" action="/APIAgregarLibro" method="POST">
             <label for="Nombre">Nombre: </label>
             <input type="text" name="Nombre"  
                 onchange="validarTexto(this)"
@@ -36,7 +36,7 @@
                     value = ""
                     />      
                 <label for="Género">Género: </label>    
-                <select>
+                <select name="Gen">
                     <option>Romance</option>   
                     <option>Terror</option> 
                     <option>Novela histórica</option> 

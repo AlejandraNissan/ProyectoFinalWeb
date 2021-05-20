@@ -31,5 +31,6 @@ function submitHandle(form){
     console.log(document.myForm);
     console.log(document.myForm.Nombre.value);
     console.log("hola");
+    document.myForm.submit();
     return false;
 }
