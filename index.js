@@ -23,8 +23,12 @@ function validarFecha(field){
     }
 }
 
-function submitHandle(form){
+function validar(form){
 
-    //console.log(document.getElementById());
+}
+
+function submitHandle(form){
+    console.log(document.myForm);
     console.log("hola");
+    return false;
 }
