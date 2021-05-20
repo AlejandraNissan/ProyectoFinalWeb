@@ -15,7 +15,8 @@
                 <button>+</button>
             </ul>        
         </div>
-        <form name="myForm" onsubmit="submitHandle(this);">
+        <!-- cambiar validaciones a onImput y de ahí mandar llamar funcion de validar banderas  -->
+        <form name="myForm" onsubmit="submitHandle(this); return false;">
             <label for="Nombre">Nombre: </label>
             <input type="text" name="Nombre"  
                 onchange="validarTexto(this)"

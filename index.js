@@ -29,6 +29,7 @@ function validar(form){
 
 function submitHandle(form){
     console.log(document.myForm);
+    console.log(document.myForm.Nombre.value);
     console.log("hola");
     return false;
 }
