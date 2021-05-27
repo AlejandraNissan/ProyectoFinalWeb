@@ -37,7 +37,7 @@ function submitHandle(form){
 
 async function buscarLeidos(){
     console.log("Si corre");
-    let book, titulo, autor, estado, img;
+    let book, titulo, autor, estado, img, btnEditar, btnComment;
     let imgUrl = "https://picsum.photos/100/200";
 
     let leidos, leyendo, porLeer;
@@ -81,10 +81,20 @@ async function buscarLeidos(){
                 img = document.createElement("img");
                 img.src = imgUrl;
 
+                btnEditar = document.createElement("button");
+                btnEditar.innerHTML = "Ver detalles";
+                
+                btnEditar.onclick = function(){
+                    mostrarDetalles(data[i]);
+                }
+
+                console.log(btnEditar);
+
                 book.appendChild(img);
                 book.appendChild(titulo);
                 book.appendChild(autor);
                 book.appendChild(estado);
+                book.appendChild(btnEditar);
 
                 listaLeidos.appendChild(book);
             }
@@ -92,4 +102,10 @@ async function buscarLeidos(){
       } catch (error) {
         console.log(error)
       }
+}
+
+function mostrarDetalles(libro){
+    //document.location.href = 'agregarLibro.html'"
+    console.log("entro aqui")
+    console.log(libro.titulo);
 }
