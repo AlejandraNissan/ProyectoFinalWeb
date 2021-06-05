@@ -23,3 +23,20 @@ form{
     display: inline-block;
     width: 100px;
 }
+
+
+ul{
+    display: flex;
+}
+
+li{
+    margin: 5px;
+    background-color: rgba(221, 192, 26, 0.801);
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
