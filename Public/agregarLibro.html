@@ -9,23 +9,21 @@
     <body>
         <div class= "nav">
             <ul>
-                <button>Leidos</button>
-                <button>Leyendo</button>
-                <button>Por leer</button>
-                <button>+</button>
+                <button onclick="location.href = 'home.html'">Home</button>
+                <button onclick="location.href = 'agregarLibro.html'">+</button>
             </ul>        
         </div>
         <!-- cambiar validaciones a onImput y de ahí mandar llamar funcion de validar banderas  -->
         <form name="myForm" action="/APIAgregarLibro" method="POST">
             <label for="Nombre">Título: </label>
             <input type="text" name="Nombre"  
-                onchange="validarTexto(this)"
+                onchange="validarTitulo(this)"
                 placeholder="Escribe el Nombre del Libro"
                 value = ""
                 />
                 <label for="Autor">Autor: </label>
                 <input type="text" name="Autor"  
-                    onchange="validarTexto(this)"
+                    onchange="validarAutor(this)"
                     placeholder="Escribe el Autor"
                     value = ""
                     />            
@@ -53,7 +51,7 @@
                     <option>Por leer</option> 
                 </select>
                     
-                <input type="submit" id = "submit" value="Enviar"/> 
+                <input type="submit" id = "submit" value="Enviar" style= "display: none"> 
  
         </form>
     </body>

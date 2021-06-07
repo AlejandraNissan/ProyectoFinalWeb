@@ -1,12 +1,31 @@
-function validarTexto(field){
+let titulo, autor, anio;
+
+let titulo2=true, autor2=true, anio2=true;
+
+function validarTitulo(field){
     if(field.value.length>2){
         field.style.background = "white";
-        nombre = true;
+        titulo = true;
         nombreValor = field.value;
     }
     else{
         field.style.background = "red";
+        titulo = false;
     }
+    validar();
+}
+
+function validarAutor(field){
+    if(field.value.length>2){
+        field.style.background = "white";
+        autor = true;
+        nombreValor = field.value;
+    }
+    else{
+        field.style.background = "red";
+        autor = false;
+    }
+    validar();
 }
 
 //Preguntar fecha
@@ -15,16 +34,80 @@ function validarFecha(field){
     //Checar que la fecha sea anterior a la de hoy
     if(field.value.length!=null && (new Date(field.value) <= new Date(new Date()))){
         field.style.background = "white";
-        fNacimiento = true;
+        anio = true;
         fNacimientoValor = field.value;
     }
     else{
         field.style.background = "red";
+        anio = false;
+    }
+    validar();
+}
+
+function validar(){
+    let boton = document.getElementById("submit");
+    console.log(boton.style.display);
+
+    if(titulo==true && autor==true && anio==true){
+        boton.style.display = "block";
+    }
+    else{
+        boton.style.display = "none";
     }
 }
 
-function validar(form){
+function validarTitulo2(field){
+    if(field.value.length>2){
+        field.style.background = "white";
+        titulo2 = true;
+        nombreValor = field.value;
+    }
+    else{
+        field.style.background = "red";
+        titulo2 = false;
+    }
+    validar2();
+}
 
+function validarAutor2(field){
+    if(field.value.length>2){
+        field.style.background = "white";
+        autor2 = true;
+        nombreValor = field.value;
+    }
+    else{
+        field.style.background = "red";
+        autor2 = false;
+    }
+    validar2();
+}
+
+//Preguntar fecha
+function validarFecha2(field){
+    console.log(new Date (field.value));
+    //Checar que la fecha sea anterior a la de hoy
+    if(field.value.length!=null && (new Date(field.value) <= new Date(new Date()))){
+        field.style.background = "white";
+        anio2 = true;
+        fNacimientoValor = field.value;
+    }
+    else{
+        field.style.background = "red";
+        anio2 = false;
+    }
+    validar2();
+}
+
+function validar2(){
+    let boton = document.getElementById("submit");
+    console.log(boton.style.display);
+
+    if(titulo2==true && autor2==true && anio2==true){
+        boton.style.display = "block";
+    }
+    else{
+        boton.style.display = "none";
+    }
 }
 
 function submitHandle(form){
@@ -40,12 +123,14 @@ async function buscarLeidos(){
     let id, book, titulo, autor, estado, img, btnEditar;
     let imgUrl = "https://picsum.photos/100/200";
 
-    let leidos, leyendo, porLeer;
+    let leidos, leyendo, porLeer, home;
 
+    home = document.getElementById("introHome");
     leidos = document.getElementById("leidos");
     leyendo = document.getElementById("leyendo");
     porLeer = document.getElementById("porLeer");
 
+    home.style.display = "none";
     leyendo.style.display = "none";
     porLeer.style.display = "none";
 
@@ -85,7 +170,7 @@ async function buscarLeidos(){
                 btnEditar.innerHTML = "Ver detalles";
 
                 btnEliminar = document.createElement("button");
-                btnEliminar.innerHTML = "-";
+                btnEliminar.innerHTML = "Eliminar";
                 
                 btnEditar.onclick = function(){
                     mostrarDetalles(data[i]);
@@ -117,12 +202,14 @@ async function buscarLeyendo(){
     let id, book, titulo, autor, estado, img, btnEditar;
     let imgUrl = "https://picsum.photos/100/200";
 
-    let leidos, leyendo, porLeer;
+    let leidos, leyendo, porLeer, home;
 
+    home = document.getElementById("introHome");
     leidos = document.getElementById("leidos");
     leyendo = document.getElementById("leyendo");
     porLeer = document.getElementById("porLeer");
 
+    home.style.display = "none";
     leidos.style.display = "none";
     porLeer.style.display = "none";
 
@@ -162,7 +249,7 @@ async function buscarLeyendo(){
                 btnEditar.innerHTML = "Ver detalles";
 
                 btnEliminar = document.createElement("button");
-                btnEliminar.innerHTML = "-";
+                btnEliminar.innerHTML = "Eliminar";
                 
                 btnEditar.onclick = function(){
                     mostrarDetalles(data[i]);
@@ -194,12 +281,14 @@ async function buscarPorLeer(){
     let id, book, titulo, autor, estado, img, btnEditar;
     let imgUrl = "https://picsum.photos/100/200";
 
-    let leidos, leyendo, porLeer;
+    let leidos, leyendo, porLeer, home;
 
+    home = document.getElementById("introHome");
     leidos = document.getElementById("leidos");
     leyendo = document.getElementById("leyendo");
     porLeer = document.getElementById("porLeer");
 
+    home.style.display = "none";
     leidos.style.display = "none";
     leyendo.style.display = "none";
 
@@ -239,7 +328,7 @@ async function buscarPorLeer(){
                 btnEditar.innerHTML = "Ver detalles";
 
                 btnEliminar = document.createElement("button");
-                btnEliminar.innerHTML = "-";
+                btnEliminar.innerHTML = "Eliminar";
                 
                 btnEditar.onclick = function(){
                     mostrarDetalles(data[i]);
