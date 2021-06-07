@@ -21,3 +21,8 @@ El proyecto es una página web en la que se pueden agregar los libros que el usu
 
 ## Capturas de la página web <a name="Capturas"></a>
 ![alt text](ReadMe/Home.png "Title")
+![alt text](ReadMe/Leido.png "Title")
+![alt text](ReadMe/Leyendo.png "Title")
+![alt text](ReadMe/PorLeer.png "Title")
+![alt text](ReadMe/Editar.png "Title")
+![alt text](ReadMe/Agregar.png "Title")
