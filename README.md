@@ -3,7 +3,7 @@
 ### Fernando Garrote A01027503
 ### Alejandra Nissan A01024682
 
-# Table of Contents
+# Índice de Contenidos
 1. [Instrucciones De Ejecución del Código](#Instrucciones)
 2. [Descripción del Proyecto](#Descripcion)
 3. [Arquitectura de Solución](Arquitectura)
