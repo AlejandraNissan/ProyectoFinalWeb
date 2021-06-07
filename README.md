@@ -24,5 +24,5 @@ El proyecto es una página web en la que se pueden agregar los libros que el usu
 ![Leido](ReadMe/Leido.png "Leido")
 ![Leyendo](ReadMe/Leyendo.png "Leyendo")
 ![PorLeer](ReadMe/PorLeer.png "PorLeer")
-![Editar(ReadMe/Editar.png "Editar")
+![Editar](ReadMe/Editar.png "Editar")
 ![Agregar](ReadMe/Agregar.png "Agregar")
